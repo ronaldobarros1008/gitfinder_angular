@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./style/variables";
+@import "./style/typography";
+@import "./style/button";
+@import "./style/form";
+@import "./style/card";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0; 
+    font-family: $text-font-stack;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    color: $text-color;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    .container__wrapper {
+        margin-top: 1rem;
+        max-width: $max-width;
+        margin: 0 auto;
+        top: -180px;
+        position: relative;
+        h1 { margin-bottom: 0;}
+        h3 { margin-top: 0;}
+    }
+    &--contrast {
+        min-height: 200px;
+        background-color: $secondary-color;
+    }
+}
+
+.placeholder {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
